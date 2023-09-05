@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  background-color: #073042;
+
+  padding: 18px 70px;
+  margin: 0;
+}
+/* 
+.header__logo {
+} */
