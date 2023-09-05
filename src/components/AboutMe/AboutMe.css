@@ -1,0 +1,100 @@
+.about {
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.about__link {
+  text-decoration: none;
+  color: #ffffff;
+  padding-top: 99px;
+}
+
+.about__git {
+  margin: 0;
+  padding: 0;
+  padding-top: 99px;
+  font-size: 14px;
+  line-height: normal;
+  font-style: normal;
+  font-weight: 500;
+
+  text-align: left;
+}
+.about__card {
+  margin-top: 66px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.about__description {
+  max-width: 600px;
+}
+.about__name {
+  margin: 0;
+  padding: 0;
+
+  font-size: 50px;
+  line-height: 1.16;
+  font-style: normal;
+  font-weight: 400;
+
+  letter-spacing: -2px;
+
+  text-align: left;
+  color: #ffffff;
+}
+.about__title {
+  margin: 0;
+  padding: 0;
+  margin-top: 110px;
+  font-size: 22px;
+  line-height: normal;
+  font-style: normal;
+  font-weight: 400;
+
+  letter-spacing: -0.88px;
+
+  text-align: left;
+  color: #ffffff;
+}
+
+.about__profession {
+  margin: 0;
+  padding: 0;
+
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 1.11;
+  font-style: normal;
+  font-weight: 500;
+
+  text-align: left;
+  color: #ffffff;
+}
+.about__story {
+  margin: 0;
+  padding: 0;
+  margin-top: 26px;
+  margin-bottom: 99px;
+  font-size: 14px;
+  line-height: 1.57;
+  font-style: normal;
+  font-weight: 400;
+
+  text-align: left;
+  color: #ffffff;
+}
+.about__photo {
+  border-radius: 10px;
+}
+
+.about__line {
+  border-color: #dadada;
+  margin: 0;
+  padding: 0;
+  margin-top: 23px;
+  /* margin-bottom: 20px; */
+  /* height: 1px; */
+  /* border-width: 1px; */
+  /* width: 1px; */
+}

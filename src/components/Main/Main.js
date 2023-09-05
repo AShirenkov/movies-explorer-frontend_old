@@ -1,9 +1,11 @@
 import React from 'react';
 import Portfolio from '../Portfolio/Portfolio';
+import AboutMe from '../AboutMe/AboutMe';
 import './Main.css';
 function Main() {
   return (
     <main className='content'>
+      <AboutMe />
       <Portfolio />
       {/* <section className='profiles'>
         <div className='profile'>
