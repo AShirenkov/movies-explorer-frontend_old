@@ -1,10 +1,14 @@
 import React from 'react';
 import Portfolio from '../Portfolio/Portfolio';
 import AboutMe from '../AboutMe/AboutMe';
+import Techs from '../Techs/Techs';
+import AboutProject from '../AboutProject/AboutProject';
 import './Main.css';
 function Main() {
   return (
     <main className='content'>
+      <AboutProject />
+      <Techs />
       <AboutMe />
       <Portfolio />
       {/* <section className='profiles'>
