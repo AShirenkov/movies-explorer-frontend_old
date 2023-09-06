@@ -9,7 +9,6 @@ import { useNavigate, Navigate } from 'react-router-dom';
 
 import Header from '../Header/Header';
 import Main from '../Main/Main';
-import Footer from '../Footer/Footer';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
@@ -28,7 +27,7 @@ function App() {
             path='/'
             element={
               <ProtectedRoute
-                element={Header}
+                element={Main}
                 isLoggedIn={isLoggedIn}
                 // onEditProfile={handleEditAvatarClick}
                 // onAddPlace={handleAddPlaceClick}
@@ -52,7 +51,6 @@ function App() {
 
         {/* <Header>test</Header> */}
         <Main />
-        <Footer />
       </div>
     </CurrentUserContext.Provider>
 
