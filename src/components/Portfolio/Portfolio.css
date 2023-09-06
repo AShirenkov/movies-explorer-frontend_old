@@ -12,30 +12,12 @@
   list-style-type: none;
   margin: 0 auto;
   padding: 0 auto;
+  border-bottom: 1px solid #424242;
+  margin-bottom: 19px;
 }
-.portfolio__link {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-decoration: none;
-  color: #ffffff;
-}
-.portfolio__text {
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-  line-height: 1.67;
-  font-style: normal;
-  font-weight: 400;
-
-  letter-spacing: -1.2px;
-
-  text-align: left;
-  color: #ffffff;
-}
-
-.portfolio__text_pointer {
-  line-height: 2;
+.portfolio__item:last-child {
+  border: none;
+  margin-bottom: 0;
 }
 .portfolio__line {
   border-color: #424242;
@@ -54,8 +36,6 @@
   line-height: 1.11;
   font-style: normal;
   font-weight: 400;
-
-  letter-spacing: -1.2px;
 
   text-align: left;
   color: #8b8b8b;
