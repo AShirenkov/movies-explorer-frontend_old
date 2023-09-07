@@ -10,6 +10,9 @@ import { useNavigate, Navigate } from 'react-router-dom';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import Login from '../Login/Login';
+import Register from '../Register/Register';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
@@ -23,34 +26,27 @@ function App() {
     <CurrentUserContext.Provider value={currentUser}>
       <div className='page'>
         <Routes>
-          <Route
+          {/* <Route
             path='/'
             element={
               <ProtectedRoute
                 element={Main}
                 isLoggedIn={isLoggedIn}
-                // onEditProfile={handleEditAvatarClick}
-                // onAddPlace={handleAddPlaceClick}
-                // onEditAvatar={handleEditProfileClick}
-                // onCardClick={handleCardClick}
-                // onCardLike={handleCardLike}
-                // onCardDelete={handleCardDelete}
-                // cards={cards}
+               
               />
             }
-          />
-
+          /> */}
+          <Route path='/' element={<Main isLoggedIn={isLoggedIn} />} />
           {/* <Route path='/sign-up' element={<Register onRegister={handleRegister} />} />
           <Route path='/sign-in' element={<Login onLogin={handleLogin} />} /> */}
 
-          <Route
-            path='*'
-            element={isLoggedIn ? <Navigate to='/' /> : <Navigate to='/sign-in' replace />}
-          />
+          <Route path='/signup' element={<Register />} />
+          <Route path='/signin' element={<Login />} />
+          <Route path='*' element={<NotFoundPage />} />
         </Routes>
 
         {/* <Header>test</Header> */}
-        <Main />
+        {/* <Main /> */}
       </div>
     </CurrentUserContext.Provider>
 
