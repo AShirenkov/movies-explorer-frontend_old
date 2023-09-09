@@ -14,6 +14,8 @@ import Login from '../Login/Login';
 import Register from '../Register/Register';
 import Profile from '../Profile/Profile';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
+import Movies from '../Movies/Movies';
+import SavedMovies from '../SavedMovies/SavedMovies';
 
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
@@ -47,7 +49,9 @@ function App() {
 
           <Route path='/signup' element={<Register />} />
           <Route path='/signin' element={<Login />} />
-          <Route path='/profile' element={<Profile />} />
+          <Route path='/profile' element={<Profile isLoggedIn={isLoggedIn} />} />
+          <Route path='/movies' element={<Movies isLoggedIn={isLoggedIn} />} />
+          <Route path='/saved-movies' element={<SavedMovies isLoggedIn={isLoggedIn} />} />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
 

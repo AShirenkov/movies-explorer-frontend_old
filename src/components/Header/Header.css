@@ -3,10 +3,14 @@
   flex-direction: row;
   justify-content: space-between;
 
-  background-color: #073042;
-
   padding: 18px 70px;
   margin: 0;
+}
+.header_background_full {
+  background-color: #073042;
+}
+.header_background_clear {
+  background-color: none;
 }
 /* 
 .header__logo {
