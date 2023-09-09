@@ -65,14 +65,14 @@ function Login() {
           </div>
         </div>
 
-        <button type='submit' disabled={!isValid} className='login__button'>
+        <button type='submit' disabled={!isValid} className='login__button opacity-button'>
           Войти
         </button>
       </form>
       <div className='login__register'>
         <p className='login__text login__text_type_register'>Ещё не зарегистрированы?</p>
 
-        <Link className='login__text login__text_type_link' to='/signup'>
+        <Link className='login__text login__text_type_link opacity-link' to='/signup'>
           Регистрация
         </Link>
       </div>

@@ -85,14 +85,14 @@ function Register() {
           </div>
         </div>
 
-        <button type='submit' disabled={!isValid} className='register__button'>
+        <button type='submit' disabled={!isValid} className='register__button  opacity-button'>
           Зарегистрироваться
         </button>
       </form>
       <div className='register__login'>
         <p className='register__text register__text_type_login'>Уже зарегистрированы?</p>
 
-        <Link className='register__text register__text_type_link' to='/signin'>
+        <Link className='register__text register__text_type_link opacity-link' to='/signin'>
           Войти
         </Link>
       </div>

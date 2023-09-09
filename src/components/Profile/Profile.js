@@ -1,9 +1,9 @@
 //import React from 'react';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Profile.css';
 import Header from '../Header/Header';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
 function Profile() {
@@ -12,18 +12,33 @@ function Profile() {
 
     formState: { errors, isValid },
     handleSubmit,
-    reset,
+
     setValue
   } = useForm({
     mode: 'onBlur'
   });
 
+  const [isEditMode, setIsEditMode] = useState(false);
+
   const currentUser = useContext(CurrentUserContext);
-  const onSubmit = data => reset();
+
+  function onEditClick(evt) {
+    // console.log('нажата клавиша редактировать');
+    setIsEditMode(true);
+    evt.preventDefault();
+  }
+  function onLogoutClick(data) {
+    console.log('нажата клавиша выйти из аккаунта');
+
+    // setIsEditMode(true);
+  }
+  const onSubmit = data => setIsEditMode(false);
 
   useEffect(() => {
     setValue('name', currentUser.name);
+
     setValue('email', currentUser.email);
+    // eslint-disable-next-line
   }, [currentUser]);
   return (
     <>
@@ -38,6 +53,7 @@ function Profile() {
               type='text'
               className='profile__input profile__input_type_name'
               placeholder='Имя'
+              disabled={!isEditMode}
               //   value={`${currentUser.name}`}
               {...register('name', {
                 required: 'Поле обязательно к заполнению.',
@@ -58,6 +74,7 @@ function Profile() {
               type='text'
               className='profile__input'
               placeholder='E-mail'
+              disabled={!isEditMode}
               //   value={`${currentUser.email}`}
               {...register('email', {
                 required: 'Поле обязательно к заполнению.',
@@ -75,22 +92,37 @@ function Profile() {
               )}
             </div>
           </div>
+          {!isEditMode ? (
+            <>
+              <button
+                type='button'
+                // disabled={!isValid}
+                className='profile__button profile__button_type_edit'
+                onClick={onEditClick}
+              >
+                Редактировать
+              </button>
 
-          <button
-            type='submit'
-            disabled={!isValid}
-            className='profile__button profile__button_type_edit'
-          >
-            Редактировать
-          </button>
-
-          <button
-            type='button'
-            disabled={!isValid}
-            className='profile__button profile__button_type_exit'
-          >
-            Выйти из аккаунта
-          </button>
+              <button
+                type='button'
+                // disabled={!isValid}
+                className='profile__button profile__button_type_exit'
+                onClick={onLogoutClick}
+              >
+                Выйти из аккаунта
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                type='submit'
+                disabled={!isValid}
+                className='profile__button-save opacity-button'
+              >
+                Сохранить
+              </button>
+            </>
+          )}
         </form>
       </div>
     </>
