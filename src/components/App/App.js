@@ -12,6 +12,7 @@ import Main from '../Main/Main';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
+import Profile from '../Profile/Profile';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
@@ -21,6 +22,10 @@ function App() {
   const [currentUser, setCurrentUser] = useState({});
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setCurrentUser({ name: 'Виталий', email: 'pochta@yandex.ru' });
+  }, []);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -42,6 +47,7 @@ function App() {
 
           <Route path='/signup' element={<Register />} />
           <Route path='/signin' element={<Login />} />
+          <Route path='/profile' element={<Profile />} />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
 
