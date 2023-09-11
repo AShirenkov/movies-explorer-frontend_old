@@ -19,7 +19,7 @@ function SavedMovies({ isLoggedIn }) {
       <Header isLoggedIn={isLoggedIn} />
       <main className='content'>
         <SearchForm />
-        <MoviesCardList moviesList={moviesList} />
+        <MoviesCardList moviesList={moviesSaved} />
       </main>
       <Footer />
     </>
