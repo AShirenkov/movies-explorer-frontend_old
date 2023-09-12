@@ -71,3 +71,12 @@
 .movies-card__saved-button_hidden:hover {
   opacity: 1;
 }
+
+@media (max-width: 900px) {
+  .movies-card__img {
+    max-height: 190px;
+  }
+  .movies-card__img-container {
+    min-height: 190px;
+  }
+}

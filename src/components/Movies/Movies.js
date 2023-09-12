@@ -8,7 +8,7 @@ import Footer from '../Footer/Footer';
 
 import { movies } from '../../utils/movies';
 
-function Movies({ isLoggedIn }) {
+function Movies({ isLoggedIn, width }) {
   const [moviesList, setMoviesList] = useState({});
   useEffect(() => {
     setMoviesList(movies);
@@ -19,7 +19,7 @@ function Movies({ isLoggedIn }) {
       <Header isLoggedIn={isLoggedIn} />
       <main className='content'>
         <SearchForm />
-        <MoviesCardList moviesList={movies} />
+        <MoviesCardList moviesList={movies} width={width} />
       </main>
       <Footer />
     </>

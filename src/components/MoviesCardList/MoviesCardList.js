@@ -5,10 +5,12 @@ import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 import { baseUrl } from '../../utils/constants';
 
-function MoviesCardList({ moviesList }) {
-  const [countCards, setCountCards] = useState(16);
+function MoviesCardList({ moviesList, width }) {
+  const countCardInitial = width > 900 ? 16 : width > 450 ? 8 : 4;
+  const countCardForAddition = width > 900 ? 16 : width > 450 ? 8 : 4; //временно число. потом можно оптимизировать в зависимости от разрешения и таребований по количеству карточек
+
+  const [countCards, setCountCards] = useState(countCardInitial);
   const [isMoviesFinished, setIsMoviesFinished] = useState(false);
-  const countCardForAddition = 4; //временно число. потом можно оптимизировать в зависимости от разрешения и таребований по количеству карточек
 
   useEffect(() => {
     if (moviesList.length < countCards) {

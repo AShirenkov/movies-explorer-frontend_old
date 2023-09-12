@@ -8,7 +8,7 @@ import { moviesSaved } from '../../utils/moviesSaved';
 
 import './SavedMovies.css';
 
-function SavedMovies({ isLoggedIn }) {
+function SavedMovies({ isLoggedIn, width }) {
   const [moviesList, setMoviesList] = useState({});
   useEffect(() => {
     setMoviesList(moviesSaved);
@@ -19,7 +19,7 @@ function SavedMovies({ isLoggedIn }) {
       <Header isLoggedIn={isLoggedIn} />
       <main className='content'>
         <SearchForm />
-        <MoviesCardList moviesList={moviesSaved} />
+        <MoviesCardList moviesList={moviesSaved} width={width} />
       </main>
       <Footer />
     </>

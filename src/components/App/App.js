@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useWindowSize } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 
 import { useNavigate, Navigate } from 'react-router-dom';
+
+// import { useWindowSize } from 'react-hooks';
 
 //import logo from './logo.svg';
 //import './App.css';
@@ -23,7 +25,18 @@ function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
 
+  const [width, setWidth] = useState(0);
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    function updateSize() {
+      setWidth(window.innerWidth);
+    }
+    updateSize();
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
 
   useEffect(() => {
     setCurrentUser({ name: 'Виталий', email: 'pochta@yandex.ru' });
@@ -50,8 +63,11 @@ function App() {
           <Route path='/signup' element={<Register />} />
           <Route path='/signin' element={<Login />} />
           <Route path='/profile' element={<Profile isLoggedIn={isLoggedIn} />} />
-          <Route path='/movies' element={<Movies isLoggedIn={isLoggedIn} />} />
-          <Route path='/saved-movies' element={<SavedMovies isLoggedIn={isLoggedIn} />} />
+          <Route path='/movies' element={<Movies isLoggedIn={isLoggedIn} width={width} />} />
+          <Route
+            path='/saved-movies'
+            element={<SavedMovies isLoggedIn={isLoggedIn} width={width} />}
+          />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
 

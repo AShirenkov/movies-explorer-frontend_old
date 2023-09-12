@@ -132,3 +132,30 @@
   background: #f8f8f8;
   color: #c2c2c2;
 }
+
+@media (max-width: 900px) {
+  .search-form {
+    /* display: block; */
+    position: relative;
+    max-width: 1140px;
+
+    border-bottom: 1px solid #424242;
+    margin: 0 30px;
+    margin-top: 77px;
+    /* margin-bottom: 10px; */
+  }
+
+  .search-form__form {
+    margin-bottom: 109px;
+  }
+  .search-form__short-movie-container {
+    padding-left: 22px;
+    margin-right: 20px;
+
+    border-left: 1px solid #505050;
+  }
+
+  .search-form__container {
+    margin-right: 19px;
+  }
+}
