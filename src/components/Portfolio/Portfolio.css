@@ -54,3 +54,25 @@
     margin-top: 49px;
   }
 }
+
+@media (max-width: 450px) {
+  .portfolio {
+    /* margin-bottom: 155px; */
+    padding: 0 14px;
+  }
+  .portfolio__item {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 21px;
+  }
+
+  .portfolio__list {
+    margin-top: 41px;
+  }
+  .portfolio__title {
+    color: #a0a0a0;
+
+    font-size: 14px;
+
+    line-height: 1.43; /* 142.857% */
+  }
+}

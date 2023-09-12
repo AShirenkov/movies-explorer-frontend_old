@@ -34,3 +34,19 @@
 .portfolio-link__text_pointer {
   line-height: 2.14;
 }
+
+@media (max-width: 450px) {
+  .portfolio-link__text {
+    font-size: 18px;
+
+    line-height: 1.56; /* 155.556% */
+    letter-spacing: -0.72px;
+  }
+
+  .portfolio-link__text_pointer {
+    letter-spacing: -0.72px;
+  }
+  .portfolio-link {
+    padding-bottom: 18px;
+  }
+}

@@ -27,3 +27,16 @@
 
   text-decoration: none;
 }
+
+@media (max-width: 450px) {
+  .header-login__text {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  .header-login__signin {
+    padding: 5px 12px;
+  }
+  .header-login {
+    gap: 16px;
+  }
+}

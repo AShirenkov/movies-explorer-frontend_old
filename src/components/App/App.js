@@ -20,7 +20,7 @@ import SavedMovies from '../SavedMovies/SavedMovies';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
 function App() {
-  const [isLoggedIn, setLoggedIn] = useState(true);
+  const [isLoggedIn, setLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
 
   const navigate = useNavigate();

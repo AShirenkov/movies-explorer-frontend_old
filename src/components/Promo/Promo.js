@@ -6,7 +6,7 @@ function Promo() {
   return (
     <section className='promo'>
       <h2 className='promo__title'>Учебный проект студента факультета Веб-разработки.</h2>
-      <img src={logo} alt='Логотип промоблока' className='promo__logo' />
+      <div className='promo__img'></div>
     </section>
   );
 }

@@ -116,3 +116,41 @@
     max-height: 307px;
   }
 }
+
+@media (max-width: 450px) {
+  .about {
+    margin-bottom: 69px;
+    margin-top: 49px;
+    padding: 0 14px;
+  }
+
+  .about__name {
+    font-size: 30px;
+
+    letter-spacing: -1.2px;
+  }
+
+  .about__profession {
+    margin-top: 23px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+  .about__story {
+    margin-top: 21px;
+    margin-bottom: 39px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+  .about__photo {
+    max-width: 292px;
+    max-height: 352px;
+  }
+
+  .about__card {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 42px;
+  }
+}

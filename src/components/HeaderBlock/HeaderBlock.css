@@ -15,3 +15,13 @@
 
   border-bottom: 1px solid #dadada;
 }
+
+@media (max-width: 900px) {
+  .header-block {
+    font-size: 18px;
+
+    letter-spacing: -0.72px;
+
+    padding-bottom: 29px;
+  }
+}
