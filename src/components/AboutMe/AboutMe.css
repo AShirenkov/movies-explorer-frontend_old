@@ -27,6 +27,7 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  gap: 49px;
 }
 .about__description {
   max-width: 600px;
@@ -45,20 +46,6 @@
   text-align: left;
   color: #ffffff;
 }
-/* .about__title {
-  margin: 0;
-  padding: 0;
-  margin-top: 110px;
-  font-size: 22px;
-  line-height: normal;
-  font-style: normal;
-  font-weight: 400;
-
-  letter-spacing: -0.88px;
-
-  text-align: left;
-  color: #ffffff;
-} */
 
 .about__profession {
   margin: 0;
@@ -88,6 +75,7 @@
 }
 .about__photo {
   border-radius: 10px;
+  object-fit: cover;
 }
 
 /* .about__line {
@@ -97,3 +85,34 @@
   margin-top: 23px;
   
 } */
+
+@media (max-width: 900px) {
+  .about {
+    margin-bottom: 91px;
+    margin-top: 90px;
+    padding: 0 50px;
+  }
+
+  .about__name {
+    font-size: 40px;
+    line-height: 1;
+
+    letter-spacing: -1.6px;
+  }
+
+  .about__profession {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .about__story {
+    margin-top: 21px;
+    margin-bottom: 85px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .about__photo {
+    max-width: 255px;
+    max-height: 307px;
+  }
+}

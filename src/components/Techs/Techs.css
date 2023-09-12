@@ -71,3 +71,39 @@
   align-items: center;
   gap: 26px;
 }
+
+@media (max-width: 900px) {
+  .techs {
+    padding: 0 50px;
+    padding-top: 91px;
+    /* padding-bottom: 125px; */
+  }
+
+  .tech__container {
+    margin-top: 81px;
+
+    gap: 22px;
+  }
+  .tech__text {
+    font-size: 12px;
+    line-height: 1.5;
+
+    letter-spacing: -0.48px;
+  }
+
+  .tech__list {
+    gap: 10px;
+    padding: 0;
+    margin-top: 83px;
+    padding-bottom: 91px;
+  }
+
+  .tech__item {
+    min-width: 84px;
+    height: 57px;
+
+    font-size: 12px;
+
+    letter-spacing: -0.48px;
+  }
+}

@@ -23,3 +23,14 @@
 .portfolio-link__text_pointer {
   line-height: 2;
 }
+@media (max-width: 900px) {
+  .portfolio-link__text {
+    font-size: 28px;
+    line-height: 1.79;
+
+    letter-spacing: -1.12px;
+  }
+}
+.portfolio-link__text_pointer {
+  line-height: 2.14;
+}

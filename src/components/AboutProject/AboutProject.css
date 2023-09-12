@@ -89,3 +89,38 @@
   background: #3ddc84;
   color: #000;
 }
+
+@media (max-width: 900px) {
+  .about-project {
+    padding: 0 50px;
+    margin-top: 91px;
+    margin-bottom: 89px;
+  }
+  .about-project__table {
+    gap: 32px;
+  }
+
+  .about-project__column {
+    gap: 22px;
+  }
+
+  .about-project__text {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: normal;
+  }
+
+  .about-project__table-period {
+    margin-top: 94px;
+    grid-template-columns: 1.07fr 4fr;
+  }
+
+  .about-project__text-period {
+    font-weight: 400;
+
+    letter-spacing: normal;
+  }
+  .about-project__title-weeks {
+    letter-spacing: normal;
+  }
+}

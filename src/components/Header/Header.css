@@ -5,6 +5,7 @@
 
   padding: 18px 70px;
   margin: 0;
+  gap: 45px;
 }
 .header_background_full {
   background-color: #073042;
@@ -15,3 +16,8 @@
 /* 
 .header__logo {
 } */
+@media (max-width: 900px) {
+  .header {
+    padding: 18px 30px;
+  }
+}

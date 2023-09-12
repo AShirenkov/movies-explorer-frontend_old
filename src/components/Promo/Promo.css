@@ -30,3 +30,20 @@
   text-align: right;
   align-self: end;
 }
+
+@media (max-width: 900px) {
+  .promo {
+    padding: 298px 44px 70px;
+    /* padding-top: 300px;
+    padding-bottom: 300px; */
+    gap: 139px;
+  }
+  .promo__title {
+    text-align: center;
+    align-self: center;
+  }
+  .promo__logo {
+    text-align: center;
+    align-self: center;
+  }
+}
