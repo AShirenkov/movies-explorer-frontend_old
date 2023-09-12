@@ -71,3 +71,29 @@
     margin-top: 97px;
   }
 }
+
+@media (max-width: 450px) {
+  .movies {
+    padding: 0;
+    margin: 0 10px;
+    margin-top: 47px;
+    padding-bottom: 31px;
+  }
+  .movies__list {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    list-style: none;
+    row-gap: 50px;
+    column-gap: 0px;
+    padding: 0;
+    margin: 0;
+  }
+  .movies__add-button {
+    margin-top: 78px;
+
+    max-width: 240px;
+    /* padding-bottom: 50px; */
+  }
+}

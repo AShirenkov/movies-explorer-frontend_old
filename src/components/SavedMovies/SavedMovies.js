@@ -9,10 +9,10 @@ import { moviesSaved } from '../../utils/moviesSaved';
 import './SavedMovies.css';
 
 function SavedMovies({ isLoggedIn, width }) {
-  const [moviesList, setMoviesList] = useState({});
-  useEffect(() => {
-    setMoviesList(moviesSaved);
-  }, []);
+  //   const [moviesList, setMoviesList] = useState({});
+  //   useEffect(() => {
+  //     setMoviesList(moviesSaved);
+  //   }, []);
 
   return (
     <>

@@ -9,10 +9,10 @@ import Footer from '../Footer/Footer';
 import { movies } from '../../utils/movies';
 
 function Movies({ isLoggedIn, width }) {
-  const [moviesList, setMoviesList] = useState({});
-  useEffect(() => {
-    setMoviesList(movies);
-  }, []);
+  //   const [moviesList, setMoviesList] = useState({});
+  //   useEffect(() => {
+  //     setMoviesList(movies);
+  //   }, []);
 
   return (
     <>

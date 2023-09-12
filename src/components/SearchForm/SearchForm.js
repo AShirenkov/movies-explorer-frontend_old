@@ -66,7 +66,7 @@ function SearchForm() {
             onClick={onSwitcherShortClick}
           >
             <img
-              className='search-form__image'
+              className='search-form__switcher'
               src={`${isShortSwitchOn ? findShortFindOn : findShortFindOff}`}
               alt='Иконка переключателя'
             />

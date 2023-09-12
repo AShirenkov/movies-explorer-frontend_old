@@ -6,7 +6,7 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 import { baseUrl } from '../../utils/constants';
 
 function MoviesCardList({ moviesList, width }) {
-  const countCardInitial = width > 900 ? 16 : width > 450 ? 8 : 4;
+  const countCardInitial = width > 900 ? 16 : width > 450 ? 8 : 5;
   const countCardForAddition = width > 900 ? 16 : width > 450 ? 8 : 4; //временно число. потом можно оптимизировать в зависимости от разрешения и таребований по количеству карточек
 
   const [countCards, setCountCards] = useState(countCardInitial);

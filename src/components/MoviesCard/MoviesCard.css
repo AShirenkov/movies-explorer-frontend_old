@@ -80,3 +80,15 @@
     min-height: 190px;
   }
 }
+
+@media (max-width: 450px) {
+  .movies-card__img {
+    max-height: 168px;
+  }
+  .movies-card__img-container {
+    min-height: 168px;
+  }
+  .movies-card {
+    gap: 12px;
+  }
+}
