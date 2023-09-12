@@ -67,7 +67,7 @@
   border-radius: 3px;
   background: #4285f4;
   height: 45px;
-  margin-top: 117px;
+  margin-top: 127px;
   box-shadow: none;
   border: none;
 
@@ -121,4 +121,37 @@
   text-align: left;
   color: #ee3465;
   margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .register {
+    margin-top: 231px;
+  }
+  /* .register__button {
+    margin-top: 127px;
+  } */
+}
+@media (max-width: 450px) {
+  .register {
+    max-width: 260px;
+    margin-top: 56px;
+    align-items: center;
+  }
+  .register__title {
+    margin-top: 47px;
+  }
+  .register__form {
+    margin-top: 80px;
+    width: 260px;
+  }
+  .register__button {
+    margin-top: 217px;
+    font-size: 12px;
+  }
+  .register__text {
+    font-size: 12px;
+  }
+  .register__login {
+    margin-top: 13px;
+  }
 }

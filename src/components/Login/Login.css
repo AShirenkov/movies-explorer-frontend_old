@@ -121,3 +121,35 @@
   color: #ee3465;
   margin-top: 10px;
 }
+@media (max-width: 900px) {
+  .login {
+    margin-top: 231px;
+  }
+  /* .register__button {
+      margin-top: 127px;
+    } */
+}
+@media (max-width: 450px) {
+  .login {
+    max-width: 260px;
+    margin-top: 56px;
+    align-items: center;
+  }
+  .login__title {
+    margin-top: 47px;
+  }
+  .login__form {
+    margin-top: 80px;
+    width: 260px;
+  }
+  .login__button {
+    margin-top: 286px;
+    font-size: 12px;
+  }
+  .login__text {
+    font-size: 12px;
+  }
+  .login__register {
+    margin-top: 13px;
+  }
+}

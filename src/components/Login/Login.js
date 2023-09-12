@@ -20,7 +20,7 @@ function Login() {
       <Link className='login__logo' to='/'>
         <img src={logo} alt='Лого Место Россия' className='header__logo' />
       </Link>
-      <h1 className='login__title'>Рады видеть</h1>
+      <h1 className='login__title'>Рады видеть!</h1>
 
       <form onSubmit={handleSubmit(onSubmit)} className='login__form'>
         <div>
