@@ -33,3 +33,24 @@
   margin-top: 246px;
   font-size: 140px;
 }
+
+@media (max-width: 900px) {
+  .not-found__text_type_title {
+    margin-top: 406px;
+  }
+}
+
+@media (max-width: 450px) {
+  .not-found__text_type_title {
+    margin-top: 329px;
+    font-size: 80px;
+  }
+  .not-found__text_type_description {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .not-found__text_type_link {
+    margin-top: 284px;
+    font-size: 12px;
+  }
+}
