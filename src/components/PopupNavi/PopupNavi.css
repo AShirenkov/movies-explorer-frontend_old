@@ -1,4 +1,4 @@
-.header-navi {
+.popup-navi {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -8,20 +8,20 @@
 
   /* margin-left: 44px; */
 }
-.header-navi__movies-container {
+.popup-navi__movies-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 16px;
 }
-.header-navi__account {
+.popup-navi__account {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 12px;
   text-decoration: none;
 }
-.header-navi__account-text {
+.popup-navi__account-text {
   color: #fff;
   font-size: 12px;
   line-height: 0.92;
@@ -30,7 +30,7 @@
 
   /* text-align: center; */
 }
-.header-navi__account-logo {
+.popup-navi__account-logo {
   /* min-width: 26px;
   min-height: 26px; */
   border-radius: 50px;
@@ -40,15 +40,15 @@
   /* margin: 8px; */
   padding: 8px;
 }
-.header-navi__account-logo_type_main {
+.popup-navi__account-logo_type_main {
   background: #0f4157;
 }
 
-.header-navi__account-logo_type_other {
+.popup-navi__account-logo_type_other {
   background: #313131;
 }
 
-.header-navi__text {
+.popup-navi__text {
   margin: 0;
   padding: 0;
   color: #fff;
@@ -59,9 +59,9 @@
 
   align-self: center;
 }
-.header-navi__text_type_active {
+.popup-navi__text_type_active {
   font-weight: 400;
 }
-.header-navi__text_type_inactive {
+.popup-navi__text_type_inactive {
   font-weight: 500;
 }

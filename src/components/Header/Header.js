@@ -1,11 +1,12 @@
 import logo from '../../images/logo.svg';
+import logoMenu from '../../images/burger.png';
 import './Header.css';
 import HeaderLogin from '../HeaderLogin/HeaderLogin';
 import { Link, useLocation } from 'react-router-dom';
 
 import React from 'react';
 import HeaderNavi from '../HeaderNavi/HeaderNavi';
-function Header({ isLoggedIn }) {
+function Header({ isLoggedIn, isBurger, onBurgerClick }) {
   const currentLocation = useLocation();
   const isMain = currentLocation.pathname === '/';
   return (
@@ -13,7 +14,18 @@ function Header({ isLoggedIn }) {
       <Link className='header__link' to='/'>
         <img src={logo} alt='Лого Место Россия' className='header__logo' />
       </Link>
-      {!isLoggedIn ? <HeaderLogin /> : <HeaderNavi />}
+      {!isLoggedIn ? (
+        <HeaderLogin />
+      ) : !isBurger ? (
+        <HeaderNavi />
+      ) : (
+        <img
+          onClick={onBurgerClick}
+          src={logoMenu}
+          alt='Кнопка перехода в меню'
+          className='header__logo'
+        />
+      )}
     </header>
   );
 }

@@ -5,25 +5,32 @@ import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 import { baseUrl } from '../../utils/constants';
 
-function MoviesCardList({ moviesList, width }) {
-  const countCardInitial = width > 900 ? 16 : width > 450 ? 8 : 5;
-  const countCardForAddition = width > 900 ? 16 : width > 450 ? 8 : 4; //временно число. потом можно оптимизировать в зависимости от разрешения и таребований по количеству карточек
+function MoviesCardList({ moviesList, countCard }) {
+  //   let countCardInitial = width > 900 ? 16 : width > 450 ? 8 : 5;
+  //   let countCardForAddition = width > 900 ? 16 : width > 450 ? 8 : 4;
 
-  const [countCards, setCountCards] = useState(countCardInitial);
   const [isMoviesFinished, setIsMoviesFinished] = useState(false);
+
+  const [countCardInitial, setCountCardInitial] = useState(countCard);
+  const [countCards, setCountCards] = useState(countCardInitial);
 
   useEffect(() => {
     if (moviesList.length < countCards) {
       setIsMoviesFinished(true);
     }
   }, []);
+  useEffect(() => {
+    // countCardInitial = width > 900 ? 16 : width > 450 ? 8 : 5;
+    // countCardForAddition = width > 900 ? 16 : width > 450 ? 8 : 4;
+    setCountCardInitial(countCard);
+  }, [countCard]);
 
   function onAddClick() {
-    if (moviesList.length < countCards + countCardForAddition) {
+    if (moviesList.length < countCards + countCardInitial) {
       setIsMoviesFinished(true);
       setCountCards(moviesList.length);
     } else {
-      setCountCards(countCards + countCardForAddition);
+      setCountCards(countCards + countCardInitial);
     }
   }
   return (

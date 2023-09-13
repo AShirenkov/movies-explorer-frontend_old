@@ -1,27 +1,27 @@
-import './HeaderNavi.css';
+import './PopupNavi.css';
 import logo from '../../images/profile.svg';
 import { Link, useLocation } from 'react-router-dom';
 
 import React from 'react';
-function HeaderNavi({ isPopup }) {
+function PopupNavi({ isPopup }) {
   const currentLocation = useLocation();
   const isMovies = currentLocation.pathname === '/movies';
   const isSavedMovies = currentLocation.pathname === '/saved-movies';
   const isMain = currentLocation.pathname === '/';
   return (
-    <div className='header-navi'>
-      <div className='header-navi__movies-container'>
+    <div className='popup-navi'>
+      <div className='popup-navi__movies-container'>
         <Link
-          className={`header-navi__text ${
-            isMovies ? 'header-navi__text_type_active' : 'header-navi__text_type_inactive'
+          className={`popup-navi__text ${
+            isMovies ? 'popup-navi__text_type_active' : 'popup-navi__text_type_inactive'
           }`}
           to='/movies'
         >
           Фильмы
         </Link>
         <Link
-          className={`header-navi__text ${
-            isSavedMovies ? 'header-navi__text_type_active' : 'header-navi__text_type_inactive'
+          className={`popup-navi__text ${
+            isSavedMovies ? 'popup-navi__text_type_active' : 'popup-navi__text_type_inactive'
           }`}
           to='/saved-movies'
         >
@@ -29,13 +29,13 @@ function HeaderNavi({ isPopup }) {
         </Link>
       </div>
 
-      <Link className='header-navi__account' to='/profile'>
-        <p className='header-navi__account-text'>Аккаунт</p>
+      <Link className='popup-navi__account' to='/profile'>
+        <p className='popup-navi__account-text'>Аккаунт</p>
         <img
           src={logo}
           alt='Иконка аккаунта'
-          className={`header-navi__account-logo ${
-            isMain ? 'header-navi__account-logo_type_main' : 'header-navi__account-logo_type_other'
+          className={`popup-navi__account-logo ${
+            isMain ? 'popup-navi__account-logo_type_main' : 'popup-navi__account-logo_type_other'
           }`}
         />
       </Link>
@@ -43,4 +43,4 @@ function HeaderNavi({ isPopup }) {
   );
 }
 
-export default HeaderNavi;
+export default PopupNavi;

@@ -1,4 +1,4 @@
-import { useState, useEffect, useWindowSize } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 
@@ -20,27 +20,42 @@ import Movies from '../Movies/Movies';
 import SavedMovies from '../SavedMovies/SavedMovies';
 
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+import PopupNavi from '../PopupNavi/PopupNavi';
 
 function App() {
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(true);
   const [currentUser, setCurrentUser] = useState({});
+  const [isBurger, setIsBurger] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [countCard, setCountCard] = useState(16);
 
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(window.innerWidth);
 
   const navigate = useNavigate();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     function updateSize() {
       setWidth(window.innerWidth);
+      setCountCard(width > 900 ? 16 : width > 450 ? 8 : 5);
+      setIsBurger(width > 900 ? false : true);
     }
     updateSize();
+
     window.addEventListener('resize', updateSize);
     return () => window.removeEventListener('resize', updateSize);
-  }, []);
+  }, [width]);
 
   useEffect(() => {
     setCurrentUser({ name: 'Виталий', email: 'pochta@yandex.ru' });
   }, []);
+
+  function handlePopupOpen() {
+    setIsPopupOpen(true);
+    console.log('ddd');
+  }
+  function handlePopupClose() {
+    setIsPopupOpen(false);
+  }
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -56,21 +71,52 @@ function App() {
               />
             }
           /> */}
-          <Route path='/' element={<Main isLoggedIn={isLoggedIn} />} />
+          <Route
+            path='/'
+            element={
+              <Main isLoggedIn={isLoggedIn} isBurger={isBurger} onBurgerClick={handlePopupOpen} />
+            }
+          />
           {/* <Route path='/sign-up' element={<Register onRegister={handleRegister} />} />
           <Route path='/sign-in' element={<Login onLogin={handleLogin} />} /> */}
 
           <Route path='/signup' element={<Register />} />
           <Route path='/signin' element={<Login />} />
-          <Route path='/profile' element={<Profile isLoggedIn={isLoggedIn} />} />
-          <Route path='/movies' element={<Movies isLoggedIn={isLoggedIn} width={width} />} />
+          <Route
+            path='/profile'
+            element={
+              <Profile
+                isLoggedIn={isLoggedIn}
+                isBurger={isBurger}
+                onBurgerClick={handlePopupOpen}
+              />
+            }
+          />
+          <Route
+            path='/movies'
+            element={
+              <Movies
+                isLoggedIn={isLoggedIn}
+                isBurger={isBurger}
+                countCard={countCard}
+                onBurgerClick={handlePopupOpen}
+              />
+            }
+          />
           <Route
             path='/saved-movies'
-            element={<SavedMovies isLoggedIn={isLoggedIn} width={width} />}
+            element={
+              <SavedMovies
+                isLoggedIn={isLoggedIn}
+                isBurger={isBurger}
+                countCard={countCard}
+                onBurgerClick={handlePopupOpen}
+              />
+            }
           />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
-
+        {isPopupOpen && <PopupNavi onButtonCloseClick={handlePopupClose} />}
         {/* <Header>test</Header> */}
         {/* <Main /> */}
       </div>

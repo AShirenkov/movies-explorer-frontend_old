@@ -8,7 +8,7 @@ import Footer from '../Footer/Footer';
 
 import { movies } from '../../utils/movies';
 
-function Movies({ isLoggedIn, width }) {
+function Movies({ isLoggedIn, isBurger, countCard }) {
   //   const [moviesList, setMoviesList] = useState({});
   //   useEffect(() => {
   //     setMoviesList(movies);
@@ -16,10 +16,10 @@ function Movies({ isLoggedIn, width }) {
 
   return (
     <>
-      <Header isLoggedIn={isLoggedIn} />
+      <Header isLoggedIn={isLoggedIn} isBurger={isBurger} />
       <main className='content'>
         <SearchForm />
-        <MoviesCardList moviesList={movies} width={width} />
+        <MoviesCardList moviesList={movies} countCard={countCard} />
       </main>
       <Footer />
     </>
