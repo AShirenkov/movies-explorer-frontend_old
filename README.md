@@ -2,7 +2,7 @@
 
 Репозиторий для дипломной работы. Фронтенд
 
-Адрес репозитория: https://github.com/AShirenkov/movies-explorer-frontend
+https://github.com/AShirenkov/movies-explorer-frontend
 
 ## Ссылки на проект
 
