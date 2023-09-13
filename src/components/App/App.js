@@ -2,16 +2,16 @@ import { useState, useEffect, useLayoutEffect } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 
-import { useNavigate, Navigate } from 'react-router-dom';
+// import { useNavigate, Navigate } from 'react-router-dom';
 
 // import { useWindowSize } from 'react-hooks';
 
 //import logo from './logo.svg';
 //import './App.css';
 
-import Header from '../Header/Header';
+// import Header from '../Header/Header';
 import Main from '../Main/Main';
-import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+// import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Login from '../Login/Login';
 import Register from '../Register/Register';
 import Profile from '../Profile/Profile';
@@ -31,7 +31,7 @@ function App() {
 
   const [width, setWidth] = useState(window.innerWidth);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useLayoutEffect(() => {
     function updateSize() {
@@ -47,6 +47,7 @@ function App() {
 
   useEffect(() => {
     setCurrentUser({ name: 'Виталий', email: 'pochta@yandex.ru' });
+    setLoggedIn(true);
   }, []);
 
   function handlePopupOpen() {

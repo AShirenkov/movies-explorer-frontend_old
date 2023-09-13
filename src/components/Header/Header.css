@@ -13,9 +13,7 @@
 .header_background_clear {
   background-color: none;
 }
-/* 
-.header__logo {
-} */
+
 @media (max-width: 900px) {
   .header {
     padding: 18px 30px;

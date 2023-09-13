@@ -17,11 +17,9 @@ function MoviesCardList({ moviesList, countCard }) {
   useEffect(() => {
     if (moviesList.length < countCards) {
       setIsMoviesFinished(true);
-    }
+    } // eslint-disable-next-line
   }, []);
   useEffect(() => {
-    // countCardInitial = width > 900 ? 16 : width > 450 ? 8 : 5;
-    // countCardForAddition = width > 900 ? 16 : width > 450 ? 8 : 4;
     setCountCardInitial(countCard);
   }, [countCard]);
 

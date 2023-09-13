@@ -18,7 +18,7 @@ function Register() {
   return (
     <div className='register'>
       <Link className='register__logo' to='/'>
-        <img src={logo} alt='Иконка ссылка' className='header__logo' />
+        <img src={logo} alt='Иконка ссылка' />
       </Link>
       <h1 className='register__title'>Добро пожаловать!</h1>
 
