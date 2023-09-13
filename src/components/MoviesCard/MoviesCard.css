@@ -61,14 +61,14 @@
   cursor: pointer;
 }
 
-.movies-card__saved-button_hidden {
+.movies-card__remove-button {
   color: #313131;
   transition: opacity 0.5s linear;
   opacity: 0;
   cursor: pointer;
 }
 
-.movies-card__saved-button_hidden:hover {
+.movies-card__remove-button:hover {
   opacity: 1;
 }
 

@@ -51,7 +51,6 @@ function App() {
 
   function handlePopupOpen() {
     setIsPopupOpen(true);
-    console.log('ddd');
   }
   function handlePopupClose() {
     setIsPopupOpen(false);
@@ -116,7 +115,7 @@ function App() {
           />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
-        {isPopupOpen && <PopupNavi onButtonCloseClick={handlePopupClose} />}
+        <PopupNavi onButtonCloseClick={handlePopupClose} isPopupOpen={isPopupOpen} />
         {/* <Header>test</Header> */}
         {/* <Main /> */}
       </div>

@@ -44,7 +44,7 @@ function MoviesCard({ name, duration, imgLink }) {
           src={`${isSavedMovies ? cardRemoveSaved : isLiked ? cardLike : cardDislike}`}
           alt='Картинка кнопка для отображения сохраненного состояния'
           className={`${
-            isSavedMovies ? 'movies-card__saved-button_hidden' : 'movies-card__saved-button'
+            isSavedMovies ? 'movies-card__remove-button' : 'movies-card__saved-button'
           }`}
         />
       </div>

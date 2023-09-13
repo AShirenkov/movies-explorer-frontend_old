@@ -8,7 +8,7 @@ import Footer from '../Footer/Footer';
 
 import { movies } from '../../utils/movies';
 
-function Movies({ isLoggedIn, isBurger, countCard }) {
+function Movies({ isLoggedIn, isBurger, countCard, onBurgerClick }) {
   //   const [moviesList, setMoviesList] = useState({});
   //   useEffect(() => {
   //     setMoviesList(movies);
@@ -16,7 +16,7 @@ function Movies({ isLoggedIn, isBurger, countCard }) {
 
   return (
     <>
-      <Header isLoggedIn={isLoggedIn} isBurger={isBurger} />
+      <Header isLoggedIn={isLoggedIn} isBurger={isBurger} onBurgerClick={onBurgerClick} />
       <main className='content'>
         <SearchForm />
         <MoviesCardList moviesList={movies} countCard={countCard} />

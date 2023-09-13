@@ -1,4 +1,4 @@
-.techs {
+.tech {
   margin: 0 auto;
   padding: 0 70px;
   padding-top: 100px;
@@ -79,7 +79,7 @@
 }
 
 @media (max-width: 900px) {
-  .techs {
+  .tech {
     padding: 0 50px;
     padding-top: 91px;
     /* padding-bottom: 125px; */
@@ -156,41 +156,3 @@
     /* flex-wrap: wrap; */
   }
 }
-
-/* @media (max-width: 760px) {
-  .tech__list {
-    justify-content: flex-start;
-    align-self: center;
-    padding: auto;
-  }
-} */
-
-/* @media (max-width: 400px) {
-  .techs {
-    padding: 0 50px;
-    padding-top: 91px;
-   
-  }
-
-  .tech__container {
-    margin-top: 81px;
-
-    gap: 22px;
-  }
-  .tech__text {
-    font-size: 12px;
-    line-height: 1.5;
-
-    letter-spacing: -0.48px;
-  }
-
-  .tech__list {
-    gap: 10px;
-    padding: 0;
-    margin-top: 83px;
-    padding-bottom: 91px;
-    flex-wrap: wrap;
-  }
-
-  
-} */

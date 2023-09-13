@@ -8,7 +8,7 @@ import { moviesSaved } from '../../utils/moviesSaved';
 
 import './SavedMovies.css';
 
-function SavedMovies({ isLoggedIn, isBurger, countCard }) {
+function SavedMovies({ isLoggedIn, isBurger, countCard, onBurgerClick }) {
   //   const [moviesList, setMoviesList] = useState({});
   //   useEffect(() => {
   //     setMoviesList(moviesSaved);
@@ -16,7 +16,7 @@ function SavedMovies({ isLoggedIn, isBurger, countCard }) {
 
   return (
     <>
-      <Header isLoggedIn={isLoggedIn} isBurger={isBurger} />
+      <Header isLoggedIn={isLoggedIn} isBurger={isBurger} onBurgerClick={onBurgerClick} />
       <main className='content'>
         <SearchForm />
         <MoviesCardList moviesList={moviesSaved} countCard={countCard} />

@@ -5,7 +5,7 @@ import HeaderBlock from '../HeaderBlock/HeaderBlock';
 
 function Techs() {
   return (
-    <section className='techs'>
+    <section className='tech'>
       {/* <h2 className='about__title'>Студент</h2>
       <hr className='about__line' /> */}
       <HeaderBlock title={'Технологии'} />

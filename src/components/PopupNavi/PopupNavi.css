@@ -1,18 +1,50 @@
 .popup-navi {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  visibility: hidden;
+  transition: visibility 0.6s, opacity 0.6s ease;
+  background-color: #202020;
+  height: 100%;
+  width: 68%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  opacity: 1;
+
   justify-content: space-between;
-  justify-self: start;
-  max-width: 1057px;
-  width: 100%;
+
+  /* max-width: 1057px;
+  width: 100%; */
 
   /* margin-left: 44px; */
 }
+.popup-back {
+  visibility: hidden;
+  transition: visibility 0.6s, opacity 0.6s ease;
+  background-color: #000;
+  opacity: 0.3;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  /* margin-left: 44px; */
+}
+
+.popup-navi_opened {
+  visibility: visible;
+
+  transition: visibility 0.6s, opacity 0.6s ease;
+}
+
 .popup-navi__movies-container {
+  margin-top: 159px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 16px;
+  gap: 28px;
 }
 .popup-navi__account {
   display: flex;
@@ -20,10 +52,11 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  align-self: center;
 }
 .popup-navi__account-text {
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 0.92;
   font-style: normal;
   font-weight: 500;
@@ -52,8 +85,8 @@
   margin: 0;
   padding: 0;
   color: #fff;
-  font-size: 13px;
-  line-height: 1.38;
+  font-size: 18px;
+  line-height: normal;
   font-style: normal;
   text-decoration: none;
 
@@ -61,7 +94,61 @@
 }
 .popup-navi__text_type_active {
   font-weight: 400;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 4px;
 }
 .popup-navi__text_type_inactive {
   font-weight: 500;
+  border: none;
+}
+.popup-navi__close-button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+
+  background: url('../../images/close.png') no-repeat center;
+  background-size: 32px 32px;
+  right: 22px;
+  top: 22px;
+
+  border: none;
+
+  /* margin: 22px;
+  padding: 22px; */
+}
+
+@media (max-width: 450px) {
+  .popup-navi__close-button {
+    background-size: 32px 32px;
+    right: 13px;
+    top: 13px;
+  }
+
+  .popup-navi {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 445px;
+    /* max-width: 1057px;
+    width: 100%; */
+
+    /* margin-left: 44px; */
+  }
+  .popup-navi__movies-container {
+    margin-top: 145px;
+
+    gap: 21px;
+  }
+  .popup-navi__account-logo {
+    padding: 6px;
+    /* margin-left: 10px; */
+  }
+  .popup-navi__account {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    align-self: center;
+  }
 }

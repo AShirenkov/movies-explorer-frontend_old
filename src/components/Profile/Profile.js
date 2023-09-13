@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 // import { Link } from 'react-router-dom';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
-function Profile({ isLoggedIn, width }) {
+function Profile({ isLoggedIn, isBurger, onBurgerClick }) {
   const {
     register,
 
@@ -42,7 +42,7 @@ function Profile({ isLoggedIn, width }) {
   }, [currentUser]);
   return (
     <>
-      <Header isLoggedIn={isLoggedIn} width={width} />
+      <Header isLoggedIn={isLoggedIn} isBurger={isBurger} onBurgerClick={onBurgerClick} />
       <div className='profile'>
         <h1 className='profile__title'>{`Привет, ${currentUser.name}!`}</h1>
 
